@@ -1,0 +1,44 @@
+/* Define a cor dos links dentro da lista .links */
+.links a {
+    color: rgb(255, 255, 255); /* Define a cor dos textos dos links como branco */
+}
+
+/* Remove os marcadores padrão e exibe os itens da lista em uma coluna */
+.links {
+    list-style-type: none; /* Remove os marcadores padrão */
+    display: flex; /* Usa flexbox para layout */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+}
+
+/* Estiliza cada item da lista */
+.links li {
+    margin-bottom: 10px; /* Adiciona espaço entre os itens */
+    padding: 10px; /* Adiciona preenchimento interno aos itens */
+    background-color: #f4f4f4; /* Cor de fundo dos itens */
+    border: 1px solid #ddd; /* Borda ao redor dos itens */
+}
+
+/* Estilos específicos para cada item da lista com IDs */
+#wpp {
+    background-color: #00C134; /* Cor de fundo para o item WhatsApp */
+}
+
+#insta {
+    background-color: #F01F61; /* Cor de fundo para o item Instagram */
+}
+
+#telegram {
+    background-color: #065FA8; /* Cor de fundo para o item Telegram */
+}
+
+#linkedin {
+    background-color: #2670AC; /* Cor de fundo para o item LinkedIn */
+}
+
+#gmail {
+    background-color: #FE0105; /* Cor de fundo para o item Gmail */
+}
+
+#dc {
+    background-color: #7068DD; /* Cor de fundo para o item Discord */
+}

@@ -1,0 +1,161 @@
+/* Define o estilo geral do corpo da página */
+body { 
+    background-color: #2FAC97; /* Cor de fundo do body */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+}
+
+/* Estilo para o container principal, que utiliza o grid layout */
+.container {
+    display: grid; /* Usa grid layout para o container */
+    grid-template-columns: 1fr 1fr; /* Cria duas colunas de tamanhos iguais */
+    width: 100%; /* Define a largura do container como 100% da tela */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #00806A; /* Cor de fundo do cabeçalho */
+    grid-column: 1 / 3; /* Faz com que o cabeçalho ocupe as duas colunas do grid */
+    display: flex; /* Usa flexbox para o layout interno do cabeçalho */
+    justify-content: space-between; /* Espaça os itens do cabeçalho igualmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 10px 20px; /* Adiciona preenchimento ao cabeçalho */
+}
+
+.nomeLogo {
+    grid-column: 1 / 2; /* Faz com que o logo ocupe a primeira coluna do grid */
+}
+
+/* Estilo para o título dentro do nomeLogo */
+.nomeLogo h1 {
+    margin: 0; /* Remove margens extra do título */
+    color: white; /* Define a cor do texto como branco */
+}
+
+/* Estilo para a lista de navegação dentro do container */
+.container ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    display: flex; /* Usa flexbox para exibir os itens da lista em linha */
+    grid-column: 2 / 3; /* Faz com que a lista ocupe a segunda coluna do grid */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    margin: 0; /* Remove a margem padrão da lista */
+}
+
+/* Estilo para cada item da lista */
+li {
+    padding: 20px; /* Adiciona preenchimento interno aos itens da lista */
+}
+
+/* Estilo para os links dentro da lista */
+a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: white; /* Define a cor dos links como branca */
+}
+
+/* Estilo para o conteúdo principal da página */
+main {
+    grid-column: 1 / 3; /* Faz com que o conteúdo principal ocupe as duas colunas do grid */
+    display: grid; /* Usa grid layout para o conteúdo principal */
+    grid-template-columns: repeat(3, 1fr); /* Cria três colunas de tamanhos iguais */
+    margin-bottom: 0; /* Remove a margem inferior */
+    height: 100%; /* Define a altura do main como 100% do contêiner pai */
+    gap: 15px; /* Adiciona espaçamento entre os itens do grid */
+}
+
+/* Estilo para a imagem dentro do main */
+main img {
+    grid-column: 1 / 2; /* Faz com que a imagem ocupe a primeira coluna do grid */
+}
+
+/* Estilo para a seção dentro do main */
+main section {
+    grid-column: 2 / 4; /* Faz com que a seção ocupe a segunda e terceira colunas do grid */
+    display: flex; /* Usa flexbox para o layout interno da seção */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
+    min-height: 100%; /* Define a altura mínima como 100% da coluna */
+}
+
+/* Estilo para o bloco de texto dentro da seção */
+.texto {
+    background-color: aliceblue; /* Cor de fundo do bloco de texto */
+    padding: 90px; /* Adiciona preenchimento interno ao bloco de texto */
+    border-radius: 20px; /* Adiciona bordas arredondadas ao bloco de texto */
+    max-width: 100%; /* Define a largura máxima como 100% do contêiner pai */
+    box-sizing: border-box; /* Inclui o preenchimento e borda no cálculo da largura */
+    text-align: center; /* Alinha o texto ao centro */
+    margin-right: 15px; /* Adiciona margem direita ao bloco de texto */
+    margin-bottom: 15px; /* Adiciona margem inferior ao bloco de texto */
+}
+
+/* Estilo para o título dentro do bloco de texto */
+.texto h2 {
+    margin: 0; /* Remove margens extras do título */
+}
+
+/* Estilo para os parágrafos dentro do bloco de texto */
+.texto p {
+    font-size: 18px; /* Define o tamanho da fonte dos parágrafos */
+    margin: 0; /* Remove margens extras dos parágrafos */
+}
+
+/* Estilo para o rodapé da página */
+footer {
+    background-color: #00806A; /* Cor de fundo do rodapé */
+    color: white; /* Define a cor do texto como branca */
+    position: fixed; /* Fixa o rodapé na parte inferior da página */
+    bottom: 0; /* Define a posição do rodapé como a parte inferior da página */
+    text-align: center; /* Alinha o texto ao centro */
+    width: 100%; /* Define a largura do rodapé como 100% da tela */
+    box-sizing: border-box; /* Inclui o preenchimento e borda no cálculo da largura */
+}
+
+/* Estilo para o botão do GitHub */
+.botaoGithub {
+    background-color: #4882CF; /* Cor de fundo do botão */
+    border: #4882CF; /* Cor da borda do botão */
+    color: aliceblue; /* Cor do texto do botão */
+    padding: 30px; /* Adiciona preenchimento interno ao botão */
+    width: 70%; /* Define a largura do botão como 70% do contêiner pai */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites do botão */
+}
+
+/* Estilo para o botão do GitHub ao passar o mouse */
+.botaoGithub:hover {
+    background-color: #4883cfb7; /* Altera a cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilo para o link dentro do botão do GitHub */
+.botaoGithub a {
+    padding: 40px; /* Adiciona preenchimento interno ao link dentro do botão */
+    margin: 0 auto; /* Centraliza o link horizontalmente */
+}
+
+
+@media (max-width: 890px) {
+    .container {
+        grid-template-columns: 1fr; /* Muda para uma coluna */
+    }
+
+    header {
+        flex-direction: column; /* Alinha itens verticalmente no cabeçalho */
+    }
+
+    .container ul {
+        flex-direction: column; /* Alinha itens da lista verticalmente */
+        grid-column: 1 / 2; /* Alinha a lista na coluna única */
+    }
+
+    .texto {
+        padding: 30px; /* Reduz o preenchimento em dispositivos móveis */
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+    }
+    main img {
+        display: none;
+    }
+}
